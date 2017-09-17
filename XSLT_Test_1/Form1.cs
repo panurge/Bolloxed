@@ -97,18 +97,22 @@ namespace XSLT_Test_1
 
                         //var utf8Text = Utf8Encoder.GetString(Utf8Encoder.GetBytes(text));
 
+                        // Create Cypher version
                         xslt.Transform(xmlReadA, writer);
                         xmlReadA.Close();
                         writer.Close();
 
+                        // Create Files.csv
                         xsltFilesCsv.Transform(xmlReadB, fcsvwriter);
                         xmlReadB.Close();
                         fcsvwriter.Close();
-
+                        
+                        // Create Directories.csv
                         xsltDirectoriesCsv.Transform(xmlReadC, dcsvwriter);
                         xmlReadC.Close();
                         dcsvwriter.Close();
-
+                        
+                        // Create Relationships.csv
                         xsltRelationshipsCsv.Transform(xmlReadD, rcsvwriter);
                         xmlReadD.Close();
                         rcsvwriter.Close();
@@ -188,7 +192,7 @@ namespace XSLT_Test_1
                     }
                     catch (Exception xe)
                     {
-                       // Debug.WriteLine(xe.Message);
+                        Debug.WriteLine(xe.Message);
 
 
                     }
