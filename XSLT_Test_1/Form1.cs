@@ -51,10 +51,15 @@ namespace XSLT_Test_1
             XslCompiledTransform xsltRelationshipsCsv = new XslCompiledTransform();
             try
             {
-                xsltFilesCsv.Load(@"\\10.176.4.109\nas04\neo4j\import\LtfsToCsvFile.xsl");
-                xsltDirectoriesCsv.Load(@"\\10.176.4.109\nas04\neo4j\import\LtfsToCsvDir.xsl");
-                xsltRelationshipsCsv.Load(@"\\10.176.4.109\nas04\neo4j\import\LtfsToCsvRel.xsl");
-                xslt.Load(@"E:\xTech\LTFS\ltfs\LtfsToCypher.xsl");
+                //xsltFilesCsv.Load(@"\\10.176.4.109\nas04\neo4j\import\LtfsToCsvFile.xsl");
+                //xsltDirectoriesCsv.Load(@"\\10.176.4.109\nas04\neo4j\import\LtfsToCsvDir.xsl");
+                //xsltRelationshipsCsv.Load(@"\\10.176.4.109\nas04\neo4j\import\LtfsToCsvRel.xsl");
+                //xslt.Load(@"E:\xTech\LTFS\ltfs\LtfsToCypher.xsl");
+
+                xsltFilesCsv.Load(@"LtfsToCsvFile.xsl");
+                xsltDirectoriesCsv.Load(@"LtfsToCsvDir.xsl");
+                xsltRelationshipsCsv.Load(@"LtfsToCsvRel.xsl");
+                xslt.Load(@"LtfsToCypher.xsl");
             }
             catch (Exception ex)
             {

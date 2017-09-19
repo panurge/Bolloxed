@@ -98,11 +98,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LtfsToCsvDir.xsl" />
-    <Content Include="LtfsToCsvFile.xsl" />
-    <Content Include="LtfsToCsvRel.xsl" />
-    <Content Include="LtfsToCypher.xsl" />
-    <Content Include="LtfsToGraphMl.xsl" />
+    <Content Include="LtfsToCsvDir.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LtfsToCsvFile.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LtfsToCsvRel.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LtfsToCypher.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LtfsToGraphMl.xsl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
