@@ -13,6 +13,7 @@ using System.Xml.XPath;
 using System.Xml.Xsl;
 using System.Diagnostics;
 using Neo4j.Driver.V1;
+using System.Threading;
 
 namespace XSLT_Test_1
 {
@@ -34,6 +35,12 @@ namespace XSLT_Test_1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            new Thread(SampleFunction).Start();
+        }
+
+        private void SampleFunction()
+        {
+            //to do - add GraphML transform
 
             string folderPath = @"E:\xTech\LTFS\ltfs";
 
@@ -71,7 +78,7 @@ namespace XSLT_Test_1
             settings.CloseOutput = true;
             settings.Encoding = Encoding.ASCII;
 
-            foreach (string file in Directory.EnumerateFiles(folderPath, "*.schema"))
+            foreach (string file in Directory.EnumerateFiles(folderPath, "3623*.schema"))
             {
                 //string contents = File.ReadAllText(file);
                 //Debug.WriteLine(file.Replace(".schema", "GraphML.xml"));
@@ -193,7 +200,7 @@ namespace XSLT_Test_1
                     catch (Exception xe)
                     {
                         Debug.WriteLine(xe.Message);
-
+                        AppendTextBox( xe.Message + "\r\n");
 
                     }
                     writer.Close();
@@ -206,6 +213,16 @@ namespace XSLT_Test_1
 
             
 
+        }
+
+        public void AppendTextBox(string value)
+        {
+            if (InvokeRequired)
+            {
+                this.Invoke(new Action<string>(AppendTextBox), new object[] { value });
+                return;
+            }
+            textBox1.Text += value;
         }
 
         private void button2_Click(object sender, EventArgs e)
