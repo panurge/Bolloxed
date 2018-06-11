@@ -7,8 +7,8 @@
     <ProjectGuid>{688FE57C-AA14-45F6-8291-CDE083C1ED03}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>XSLT_Test_1</RootNamespace>
-    <AssemblyName>XSLT_Test_1</AssemblyName>
+    <RootNamespace>LTO_XSLT_To_Neo4j</RootNamespace>
+    <AssemblyName>LTO_XSLT_To_Neo4j</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -82,6 +82,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

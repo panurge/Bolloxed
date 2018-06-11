@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace XSLT_Test_1
+namespace LTO_XSLT_To_Neo4j
 {
     static class Program
     {

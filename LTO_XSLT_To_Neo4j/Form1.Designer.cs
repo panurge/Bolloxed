@@ -1,4 +1,4 @@
-﻿namespace XSLT_Test_1
+﻿namespace LTO_XSLT_To_Neo4j
 {
     partial class Form1
     {

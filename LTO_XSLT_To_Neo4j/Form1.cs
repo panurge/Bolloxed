@@ -15,7 +15,7 @@ using System.Diagnostics;
 using Neo4j.Driver.V1;
 using System.Threading;
 
-namespace XSLT_Test_1
+namespace LTO_XSLT_To_Neo4j
 {
     public partial class Form1 : Form
     {
